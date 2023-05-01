@@ -78,12 +78,16 @@
                     itemJsonArray = [];
                     itemJsonArray.push([tit, desc]);
                     localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+                    document.getElementById("title").value ="";
+                    document.getElementById("description").value ="";
                 }
                 else{
                     itemJsonArrayStr = localStorage.getItem('itemsJson')
                     itemJsonArray = JSON.parse(itemJsonArrayStr);
                     itemJsonArray.push([tit, desc]);
                     localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+                    document.getElementById("title").value ="";
+                    document.getElementById("description").value ="";
                 }
                 update();
             }
